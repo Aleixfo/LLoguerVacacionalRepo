@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template :: head">
+</head>
+<body>
+
+<div class="container">
+
+    <header th:replace="plantilla/template :: header"></header>
+
+    <main>
+
+        <h1 th:text="${titol}"></h1>
+        <p th:text="${propietat}"></p>
+
+        <div class="row">
+
+            <div class="col-12">
+
+
+
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Propietat</th>
+                            <th scope="col">Municipi</th>
+                            <th scope="col">Normes</th>
+                            <th scope="col">Direccio</th>
+                            <th scope="col">Descompte Setmana</th>
+                            <th scope="col">Descompte Mes</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="pr:${propietat}">
+
+                            <th scope="row" th:text="${pr.idPropietat}"></th>
+                            <td th:text="${pr.nomPropietat}"></td>
+                            <td th:text="${pr.municipi.nomMunicipi}"></td>
+                            <td th:text="${pr.normes}"></td>
+                            <td th:text="${pr.direccio}"></td>
+                            <td th:text="${pr.descompteSetmana}"></td>
+                            <td th:text="${pr.descompteMes}"></td>
+                            <td>
+                                <a class="btn btn-success" th:href="@{/views/propietats/edit/}+${pr.idPropietat}"
+                                   th:text="'Editar Propietat'" title="Editar Propietat"
+                                ></a>
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" th:href="@{/views/propietats/delete/}+${pr.idPropietat}"
+                                   th:text="'Eliminar Propietat'" title="Eliminar Propietat"
+                                   onclick="return confirm('Estas segur que vols eliminar el registre?');">
+                                ></a>
+                            </td>
+
+
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+
+        </div>
+
+    </main>
+    <footer th:replace="plantilla/template :: footer"></footer>
+
+</div>
+</body>
+</html>

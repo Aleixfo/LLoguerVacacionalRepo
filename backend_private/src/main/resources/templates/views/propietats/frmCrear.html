@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template :: head">
+</head>
+<body>
+
+<div class="container">
+
+    <header th:replace="plantilla/template :: header"></header>
+
+    <div class="container">
+    <main>
+        <div class="row">
+
+            <a class="btn btn-warning" th:href="@{/views/propietats/create}"
+                th:text="'Nova Propietat'" title="Crear Nova Propietat"
+            ></a>
+
+            <div class="card bg-light">
+                <div class="card-header bg-dark text-white" th:text="${titol}"></div>
+                <div class="card-body">
+
+            <form th:object="${propietat}" th:action="@{/views/propietats/save}" method="post">
+                <input type="hidden" th:field="*{idPropietat}">
+                <div class="mb-3">
+                    <label for="nomPropietat" class="form-label">Nom de la propietat</label>
+                    <input type="text" th:field="*{nomPropietat}" class="form-control" id="nomPropietat">
+                    <div id="spannom" class="form-text">Nom de la propietat que figura en l'escriptura</div>
+                </div>
+                <div class="mb-3">
+                    <label for="municipi" class="form-label">Municipi</label>
+                    <select class="form-control" id="municipi">
+                        <option th:each="municipi:${municipis}"
+                            th:value="${municipi.idMunicipi}"
+                            th:text="${municipi.nomMunicipi}"
+                        />
+
+                    </select>
+                    <div id="municipispan" class="form-text">Selecciona el municipi on es localitza la propietat</div>
+                </div>
+                <div class="mb-3">
+                    <label for="w3review" class="form-label">Normes</label><br>
+                    <textarea id="w3review" th:field="*{normes}" name="w3review" rows="4" cols="50"></textarea>
+                    <div id="normesspan" class="form-text">Aqui pots indicar les normes que dessitjis sobre la teva propietat.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="direccio" class="form-label">Email address</label>
+                    <input type="text" th:field="*{direccio}" class="form-control" id="direccio">
+                    <div id="direcciospan" class="form-text">Direccio de la casa amb format Carrer Numero</div>
+                </div>
+                <div class="mb-3">
+                    <label for="descompteSetmana" class="form-label">Email address</label>
+                    <input type="text" th:field="*{descompteSetmana}" class="form-control" id="descompteSetmana">
+                    <div id="descompteSetmanaspan" class="form-text">Descompte aplicat en cas de lloguers majors a una setmana</div>
+                </div>
+                <div class="mb-3">
+                    <label for="descompteMes" class="form-label">Email address</label>
+                    <input type="text" th:field="*{descompteMes}" class="form-control" id="descompteMes">
+                    <div id="descompteMesspan" class="form-text">Descompte aplicat en cas de lloguers majors d'un mes</div>
+                </div>
+
+
+                <div class="card-footer bg-dark">
+                    <input type="submit" class="btn btn-warning" value="Guardar"/>
+                </div>
+            </form>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </main>
+    </div>
+    <footer th:replace="plantilla/template :: footer"></footer>
+
+</div>
+</body>
+</html>
