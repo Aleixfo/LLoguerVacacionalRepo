@@ -11,13 +11,15 @@
     <main>
 
         <h1 th:text="${titol}"></h1>
-        <p th:text="${propietat}"></p>
+        <!-- <p th:text="${propietat}"></p> -->
 
         <div class="row">
 
+            <a class="btn btn-warning" th:href="@{/views/propietats/create}"
+               th:text="'Nova Propietat'" title="Crear Nova Propietat"
+            ></a>
+
             <div class="col-12">
-
-
 
                 <table class="table table-striped">
                     <thead class="thead-dark">
@@ -26,6 +28,7 @@
                             <th scope="col">Propietat</th>
                             <th scope="col">Localitat</th>
                             <th scope="col">Normes</th>
+                            <th scope="col">Habitacions</th>
                             <th scope="col">Direccio</th>
                             <th scope="col">Descompte Setmana</th>
                             <th scope="col">Descompte Mes</th>
@@ -39,8 +42,9 @@
 
                             <th th:text="${pr.idPROPIETAT}"></th>
                             <td th:text="${pr.nomPropietat}"></td>
-                            <td th:text="${pr.localitat.cp_localitat}"></td>
+                            <td th:text="${pr.localitat.nomLocalitat}"></td>
                             <td th:text="${pr.normes}"></td>
+                            <td th:text="${pr.habitacions}"></td>
                             <td th:text="${pr.direccio}"></td>
                             <td th:text="${pr.descompteSetmana}"></td>
                             <td th:text="${pr.descompteMes}"></td>
@@ -51,7 +55,7 @@
                                 ></a>
                             </td>
                             <td>
-                                <a class="btn btn-danger" th:href="@{/views/propietats/delete/}+${pr.idPROPIETAT}"
+                                <a class="btn btn-warning" th:href="@{/views/propietats/delete/}+${pr.idPROPIETAT}"
                                    th:text="'Eliminar Propietat'" title="Eliminar Propietat"
                                    onclick="return confirm('Estas segur que vols eliminar el registre?');">
                                 ></a>

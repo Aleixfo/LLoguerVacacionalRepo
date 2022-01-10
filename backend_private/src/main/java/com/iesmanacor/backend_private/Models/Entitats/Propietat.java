@@ -16,17 +16,18 @@ public class Propietat implements Serializable {
 
     @Id //Indicam quin es el camp identificador
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Indicam com es genera l'identificador (En aquest cas AUTO_INCREMENT)
-    @Column(name="idPROPIETAT", nullable=false)
     private Long idPROPIETAT;
 
     @Column(name="nom_propietat", nullable=false)
     private String nomPropietat;
 
     @ManyToOne //Relacio de molts a un ambn la taula municipi
-    @JoinColumn(name = "id_municipi") //Especificam el nom de la taula
+    @JoinColumn(name = "id_localitat") //Especificam el nom de la taula
     private Localitat localitat;
 
     private String normes;
+
+    private int habitacions;
 
     private String direccio;
 

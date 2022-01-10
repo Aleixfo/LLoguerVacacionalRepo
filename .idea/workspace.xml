@@ -3,35 +3,41 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a2908a2-abc9-48f8-b906-072ff3cdb6af" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend_private/src/main/java/com/iesmanacor/backend_private/Models/Repositoris/LocalitatRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_private/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend_private/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_private/src/main/java/com/iesmanacor/backend_private/Controladors/ControladorPropietat.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_private/src/main/java/com/iesmanacor/backend_private/Controladors/ControladorPropietat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_private/src/main/java/com/iesmanacor/backend_private/Models/Entitats/Municipi.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_private/src/main/java/com/iesmanacor/backend_private/Models/Entitats/Localitat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_private/src/main/java/com/iesmanacor/backend_private/Models/Entitats/Propietat.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_private/src/main/java/com/iesmanacor/backend_private/Models/Entitats/Propietat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_private/src/main/java/com/iesmanacor/backend_private/Models/Repositoris/MunicipiRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_private/src/main/java/com/iesmanacor/backend_private/Models/Serveis/MunicipiServeiInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_private/src/main/java/com/iesmanacor/backend_private/Models/Serveis/LocalitatServeiInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_private/src/main/java/com/iesmanacor/backend_private/Models/Serveis/MunicipiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_private/src/main/java/com/iesmanacor/backend_private/Models/Serveis/LocalitatService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_private/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend_private/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_private/src/main/resources/templates/views/propietats/frmCrear.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend_private/src/main/resources/templates/views/propietats/frmCrearPropietat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_private/src/main/resources/templates/views/propietats/listar.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend_private/src/main/resources/templates/views/propietats/listar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_private/src/main/resources/templates/views/test.html" beforeDir="false" />
-    </list>
+    <list default="true" id="9a2908a2-abc9-48f8-b906-072ff3cdb6af" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/backend_private/src/main/java/com/iesmanacor/backend_private/Models/Entitats/Localitat.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend_private/pom.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend_private/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend_private/src/main/java/com/iesmanacor/backend_private/Models/Entitats/Localitat.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend_private/src/main/java/com/iesmanacor/backend_private/Models/Entitats/Propietat.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="23EzLTxDR6cepFaSGidpj6eSftC" />
@@ -47,7 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PROJECTEDAVID/LloguerVacacional/backend_private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend_private" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -87,5 +93,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1641845997993">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2660" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1641845997993" />
   </component>
 </project>

@@ -73,8 +73,9 @@ public class ControladorPropietat {
         return "redirect:/views/propietats/";
     }
 
-    @GetMapping("/edit/{idPropietat}")
-    public String editar(@PathVariable("idPropietat") Long idPROPIETAT, Model model) {
+
+    @GetMapping("/edit/{idPROPIETAT}")
+    public String editar(@PathVariable("idPROPIETAT") Long idPROPIETAT, Model model) {
 
         Propietat p = propietatService.buscarPorId(idPROPIETAT);
         List<Localitat> listLocalitats = localitatService.llistarLocalitats();
@@ -89,8 +90,8 @@ public class ControladorPropietat {
     }
 
 
-    @GetMapping("/delete/{idPropietat}")
-    public String eliminar(@PathVariable("idPropietat") Long idPROPIETAT) {
+    @GetMapping("/delete/{idPROPIETAT}")
+    public String eliminar(@PathVariable("idPROPIETAT") Long idPROPIETAT) {
 
         propietatService.eliminar(idPROPIETAT);
         System.out.println("Sha eliminat la propietat amb exit");
