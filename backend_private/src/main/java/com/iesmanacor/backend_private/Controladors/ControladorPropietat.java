@@ -1,16 +1,12 @@
 package com.iesmanacor.backend_private.Controladors;
 
-import com.fasterxml.jackson.databind.annotation.JsonAppend;
-import com.iesmanacor.backend_private.Models.Entitats.Municipi;
+import com.iesmanacor.backend_private.Models.Entitats.Localitat;
 import com.iesmanacor.backend_private.Models.Entitats.Propietat;
-import com.iesmanacor.backend_private.Models.Serveis.MunicipiServeiInterface;
-import com.iesmanacor.backend_private.Models.Serveis.PropietatServei;
+import com.iesmanacor.backend_private.Models.Serveis.LocalitatServeiInterface;
 import com.iesmanacor.backend_private.Models.Serveis.PropietatServeiInterface;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +22,7 @@ public class ControladorPropietat {
     private PropietatServeiInterface propietatService;
 
     @Autowired
-    private MunicipiServeiInterface municipiService;
+    private LocalitatServeiInterface localitatService;
 
     //LListar totes les propietats
     @GetMapping({"/"})
@@ -37,39 +33,39 @@ public class ControladorPropietat {
         model.addAttribute("titol", "Llista de propietats");
         model.addAttribute("propietat", llistaPropietats);
 
-        return "/views/propietats/listar"; //El return ha de retornar el nom de la vista (index.html)
+        return "/views/propietats/listar";
     }
 
     @GetMapping("/create")
     public String crear(Model model) {
 
         Propietat p = new Propietat();
-        List<Municipi> listMunicipis = municipiService.llistarMunicipis();
+        List<Localitat> listLocalitats = localitatService.llistarLocalitats();
 
         model.addAttribute("titol", "Formulari nova propietat");
         model.addAttribute("propietat", p);
-        model.addAttribute("municipis", listMunicipis);
+        model.addAttribute("localitats", listLocalitats);
 
 
 
-        return "/views/propietats/frmCrear";
+        return "/views/propietats/frmCrearPropietat";
     }
 
     @PostMapping("/save")
     public String guardar(@Validated @ModelAttribute Propietat p, BindingResult result, Model model){
 
-        List<Municipi> listMunicipis = municipiService.llistarMunicipis();
+        List<Localitat> listLocalitats = localitatService.llistarLocalitats();
 
 
         if (result.hasErrors()) {
 
             model.addAttribute("titol", "Formulari nova propietat");
             model.addAttribute("propietat", p);
-            model.addAttribute("municipis", listMunicipis);
+            model.addAttribute("localitats", listLocalitats);
 
             System.out.println("ERROR EN EL FORMULARI");
 
-            return "/views/propietats/frmCrear";
+            return "/views/propietats/frmCrearPropietat";
         }
 
         propietatService.guardar(p);
@@ -81,15 +77,15 @@ public class ControladorPropietat {
     public String editar(@PathVariable("idPropietat") Long idPROPIETAT, Model model) {
 
         Propietat p = propietatService.buscarPorId(idPROPIETAT);
-        List<Municipi> listMunicipis = municipiService.llistarMunicipis();
+        List<Localitat> listLocalitats = localitatService.llistarLocalitats();
 
         model.addAttribute("titol", "Formulari Editar propietat");
         model.addAttribute("propietat", p);
-        model.addAttribute("municipis", listMunicipis);
+        model.addAttribute("localitats", listLocalitats);
 
 
 
-        return "/views/propietats/frmCrear";
+        return "/views/propietats/frmCrearPropietat";
     }
 
 

@@ -21,22 +21,22 @@
                 <div class="card-body">
 
             <form th:object="${propietat}" th:action="@{/views/propietats/save}" method="post">
-                <input type="hidden" th:field="*{idPropietat}">
+                <input type="hidden" th:field="*{idPROPIETAT}">
                 <div class="mb-3">
                     <label for="nomPropietat" class="form-label">Nom de la propietat</label>
                     <input type="text" th:field="*{nomPropietat}" class="form-control" id="nomPropietat">
                     <div id="spannom" class="form-text">Nom de la propietat que figura en l'escriptura</div>
                 </div>
                 <div class="mb-3">
-                    <label for="municipi" class="form-label">Municipi</label>
-                    <select class="form-control" id="municipi">
-                        <option th:each="municipi:${municipis}"
-                            th:value="${municipi.idMunicipi}"
-                            th:text="${municipi.nomMunicipi}"
+                    <label for="localitat" class="form-label">Localitat</label>
+                    <select class="form-control" id="localitat">
+                        <option th:each="localitat:${localitats}"
+                            th:value="${localitat.idLOCALITAT}"
+                            th:text="${localitat.cp_localitat}"
                         />
 
                     </select>
-                    <div id="municipispan" class="form-text">Selecciona el municipi on es localitza la propietat</div>
+                    <div id="localitatspan" class="form-text">Selecciona la localitat on es localitza la propietat</div>
                 </div>
                 <div class="mb-3">
                     <label for="w3review" class="form-label">Normes</label><br>
@@ -44,17 +44,17 @@
                     <div id="normesspan" class="form-text">Aqui pots indicar les normes que dessitjis sobre la teva propietat.</div>
                 </div>
                 <div class="mb-3">
-                    <label for="direccio" class="form-label">Email address</label>
+                    <label for="direccio" class="form-label">Direccio</label>
                     <input type="text" th:field="*{direccio}" class="form-control" id="direccio">
                     <div id="direcciospan" class="form-text">Direccio de la casa amb format Carrer Numero</div>
                 </div>
                 <div class="mb-3">
-                    <label for="descompteSetmana" class="form-label">Email address</label>
+                    <label for="descompteSetmana" class="form-label">Descompte Setmanal</label>
                     <input type="text" th:field="*{descompteSetmana}" class="form-control" id="descompteSetmana">
                     <div id="descompteSetmanaspan" class="form-text">Descompte aplicat en cas de lloguers majors a una setmana</div>
                 </div>
                 <div class="mb-3">
-                    <label for="descompteMes" class="form-label">Email address</label>
+                    <label for="descompteMes" class="form-label">Descompte Mensual</label>
                     <input type="text" th:field="*{descompteMes}" class="form-control" id="descompteMes">
                     <div id="descompteMesspan" class="form-text">Descompte aplicat en cas de lloguers majors d'un mes</div>
                 </div>

@@ -2,10 +2,8 @@ package com.iesmanacor.backend_private.Models.Entitats;
 
 import com.sun.istack.NotNull;
 import lombok.Data;
-
 import javax.persistence.*;
 import java.io.Serializable;
-
 
 @Data //Longbok afegeix setters, getters i el constructor buit.
 @Entity //Entitat (se menejara amb una taula)
@@ -18,30 +16,29 @@ public class Propietat implements Serializable {
 
     @Id //Indicam quin es el camp identificador
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Indicam com es genera l'identificador (En aquest cas AUTO_INCREMENT)
+    @Column(name="idPROPIETAT", nullable=false)
     private Long idPROPIETAT;
 
-
+    @Column(name="nom_propietat", nullable=false)
     private String nomPropietat;
 
     @ManyToOne //Relacio de molts a un ambn la taula municipi
     @JoinColumn(name = "id_municipi") //Especificam el nom de la taula
-    private Municipi municipi;
+    private Localitat localitat;
 
     private String normes;
+
     private String direccio;
 
     @NotNull
-    @Column(name="%descompte_Setmana", nullable=false)
+    @Column(name="descompte_setmana", nullable=false)
     private int descompteSetmana;
 
     @NotNull
-    @Column(name="%descompte_mes", nullable=false)
+    @Column(name="descompte_mes", nullable=false)
     private int descompteMes;
 
-    /*
-    @OneToMany - Per indicar una relació de un a molts
-    private Habitacio hab;
-    */
+    private boolean activa;
 
 
 
